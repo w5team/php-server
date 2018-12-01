@@ -1,8 +1,9 @@
 /.php/composer
-/.php/Cadastro
-/.php/Notificacao
-/.html/.cache
+/public/db
 composer.phar
-composer.lock
+/.php/Cadastro
 sinc.bat
+/.php/Notificacao
 /public/update/**
+composer.lock
+/.html/.cache
