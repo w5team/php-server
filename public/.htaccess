@@ -1,0 +1,31 @@
+Options +Includes 
+AddType text/html .html
+AddOutputFilter INCLUDES .html 
+
+AddDefaultCharset utf-8
+AddCharset utf-8 .html .css .js .xml .json .rss .atom
+AddType application/x-httpd-php phar
+FileETag INode MTime Size
+ServerSignature Off 
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    #RewriteCond %{HTTP_HOST} !^localhost [NC]
+    #RewriteCond %{REMOTE_ADDR} !^127\.0\.0\.1$
+    #RewriteCond %{HTTPS} off
+    #RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule . index.php [L]
+</IfModule>
+
+
+
+#Descomente quando estiver em PRODUÇÃO
+#<IfModule mod_expires.c>
+    #ExpiresActive  On
+    #ExpiresDefault "access plus 1 week"
+    #ExpiresByType  text/html "access plus 1 week"
+#</IfModule>

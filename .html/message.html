@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Administrador</title>
+
+        <!-- PWA -->
+        <link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+        <link rel="manifest" href="img/icon/site.webmanifest">
+        <link rel="mask-icon" href="img/icon/safari-pinned-tab.svg" color="#2c5fa8">
+        <link rel="shortcut icon" href="img/icon/favicon.ico">
+        
+        <!-- FECEBOOK -->
+        <meta property="og:image:width" content="279">
+        <meta property="og:image:height" content="279">
+        <meta property="og:description" content="Server of development and homologation of computer products of WebCinco Ltda.">
+        <meta property="og:title" content="W5 Azure Server ">
+        <meta property="og:url" content="https://azw5.com">
+        <meta property="og:image" content="https://azw5.com/img/og-image.jpg">
+
+        <!-- WPhone -->
+        <meta name="msapplication-TileColor" content="#2d89ef">
+        <meta name="msapplication-config" content="img/icon/browserconfig.xml">
+        
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+    <body>
+        <header id="header" class="">
+        	<div class="container">
+        		<h1>Administrador</h1>
+        	</div>
+        </header>
+
+        <main>
+        	<h2>Notificação</h2>
+
+        	<form class="ui form" id="formMsg">
+				<div class="wide field">
+					<label>Título</label>
+					<input id="titulo" placeholder="Título da mensagem" tabindex="0">
+				</div>
+
+				<div class="wide field">
+					<label>Mensagem</label>
+					<textarea id="mensagem"></textarea>
+				</div>
+
+                <div class="wide field">
+                    <label>Link ( opcional )</label>
+                    <input type="url" id="link" placeholder="https://...">
+                </div>
+
+				<div class="wide field">
+					<label>Destinatário</label>
+					<x::select id="destino" data="usuario" class="ui search selection dropdown"/>
+				</div>
+
+				<div class="three field">
+					<button id="enviar" class="ui button red">Enviar</button>
+				</div>
+				<div class="sobre" id="loginsobre"></div>
+			</form>
+        	
+        </main>
+
+        <footer>
+        	
+        </footer>
+        <script src="js/vendor.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
